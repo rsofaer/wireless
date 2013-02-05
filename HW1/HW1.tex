@@ -53,22 +53,50 @@
 %\boldmath
 We examine changes in the environment of wireless communications
 research over the last two decades by comparing a paper written in 1991 \cite{oldpaper:rapp}
-with a recent 2011 paper \cite{newpaper:rapp} and reflect on some interesting current research topics.
+with a recent 2011 paper \cite{bigpaper:rapp} and reflect on some interesting current research topics.
 \end{abstract}
 \IEEEpeerreviewmaketitle
 
 \section{Introduction}
+In 1991, according to ``The Wireless Revolution'', there were 6.3 million
+cellular subscribers in the USA.  In 2011, when the more recent
+``State of the art in 60 GHz\ldots'' was written, almost every adult in the
+United States had a mobile phone.  The earlier article predicts an explosion
+of personal wireless devices, and briefly presents a tool for modeling spread and 
+attenuation of the wireless signals that would be used for those devices,
+called SIRCIM.  The later article is concerned with a new frequency band
+in a world where hardly anyone is without a wireless device at any time.
+It examines each component of a wireless radio system, and surveys the
+state of the art in that component in the 60GHz band.\\
 
+\subsection{Local Bands}
+``The Wireless Revolution'' is concerned with arguing that wireless networks
+would soon rapidly expand in the 900MHz and other cellular bands, and
+presenting the work of the MPRG research group at the Virginia Polytechnic
+Institute towards making that expansion practical, in the form of modeling
+software.  The new piece of spectrum enables more bandwidth, more users, and 
+new applications.  In 2001, the 60GHz band is filling much the same role.  
+The prospect of vast amounts of bandwith inspires new applications, like 
+wireless connections that only reach through one room, in order to connect
+to highly local devices.  
 
-\subsection{Subsection Heading Here}
-Subsection text here.
+\subsection{Technical Detail}
+The 1991 paper is mostly historical, while the 2011 paper is mostly about
+specific engineering efforts.
 
+\subsubsection{Software vs Hardware}
+The technical part of the 1991 paper is mostly about software,
+while the 2011 paper is very concerned with specific hardware and
+hardware production techniques.
 
-\subsubsection{Subsubsection Heading Here}
-Subsubsection text here.
+\subsection{Magazine article vs Journal article}
+The 1991 paper is a magazine article, rather than a technical paper.
+It doesn't have an abstract and is much more casual reading.  The 2011 paper
+is much more technical, with the abstract and keyword listing needed for a
+journal article.
 
-\section{Future Research Interests}
-\subsection{Casual Environmental Monitoring}
+\section{Possible Research Interests}
+\subsection{Environmental Monitoring}
 As the cost of electronics goes down, applications that might have been
 absurdly costly in the past seem plausible.  One such application might be
 widespread monitoring of our living environment in radically more detail
@@ -76,58 +104,53 @@ than we have had in the past.  Today, a new arrival in New York City
 looking for an apartment might look at crime heatmaps, maps of businesses,
 maps of language use, and typical price maps.  What if that renter could 
 look at maps of how noise levels on his prospective block change over a typical
-day?  What if he could know how air pollution changes with the wind direction?
+day?  What if he could know how air pollution in his area changes when
+the wind comes over the Gowanus Canal?\\
 In Java and Indonesia, researchers are considering using low-cost battery powered
 sensing kits for vital warning of natural disasters as well as ecological
 sensing \cite{envmon:wira}.  Their prototype kits monitor water level and provide
 a camera feed, with the goal of being an early warning system for floods coming
-down a river.  Closer to home, earphone
-
-system might use APRS telemetry at very small sensing nodes, and use larger
-data collection nodes connected to the internet to aggregate the telemetry
-and send it to a central server.
-The conclusion goes here.
+down a river.  Other applications include water quality monitoring, seismic 
+monitoring, and animal monitoring.  The researchers use a package connected by wifi to their 
+university network, but they plan on using longer range radio to connect
+more distant sensors to the internet.\\
+In another project, researchers from New South Wales and Portland
+State University are working to use the already widely distributed smartphones
+in urban areas to monitor street noise \cite{envmon:rana}.  Each reading comes with GPS or other
+location data as well as noise level data, so even though there are no permenant
+sensors, it is possible to have consistent monitoring of any area.  Records are
+gathered constantly, than transmitted in batches to a central server. \\
+Today, new funding options like Kickstarter allow a project to be useful on a 
+small scale while building a foundation to mass-produce a small device.  In 
+one example, an IndieGogo project called uBiome \cite{envmon:rich} aims to 
+create a sampling kit that lets anyone pay a small amount to get a sampling kit
+and characterize their stomach, skin and gut bacteria.  This is
+useful today, but if more data is gathered, it becomes more useful as what is
+normal becomes clearer.  Similarly, if there was a cheap sensor that anyone could buy, put a battery into,
+duct tape to a wall, and forget about, an environmental monitoring system might
+be able to smoothly scale from slightly useful to comprehensive. 
+A package with a noise level, particulate, and GPS sensors could use a cellular
+connection if necessary, or wifi, or for a long batter life, APRS telemetry to 
+transmit data to a central server.  Anyone interested in monitoring their environment
+could purchase either sensor nodes that would connect directly to the internet or
+to some internet-connected middle device and add their data to a central repository
+for analysis.  If costs were low enough, anyone interested could look at the
+difference in noise level and air quality not only between different parts of
+a city, but between different floors above the street.  A sensor powered by 
+a few batteries could last for at least a year, and by transmitting voltage data, the
+sensor could effectively ask the central repository to call a nearby volunteer
+to come by with a few new AAs.  This sort of publicly available low maintenance
+sensor network could keep residents of any area informed about their environment
+without needing expensive studies or equipment to understand their living space.
 \subsection{Mesh Networking}
-\subsection{Wifi Interference}
+Aside from buggy and mostly useless support for 'ad-hoc' wireless networking,
+today's consumer wireless data capable almost all connect to central hubs and 
+awkwardly switch as the user moves out of range of the old network. \\
 
+Naval Postgraduate School research: OPTIMAL TRANSMITTER PLACEMENT IN WIRELESS MESH NETWORKS\\
+MobiMESH project in Milan.\\
+OLPC Mesh Networking
 
-
-
-% conference papers do not normally have an appendix
-
-
-% use section* for acknowledgement
-\section*{Acknowledgment}
-
-
-The authors would like to thank...
-
-
-
-
-
-% trigger a \newpage just before the given reference
-% number - used to balance the columns on the last page
-% adjust value as needed - may need to be readjusted if
-% the document is modified later
-%\IEEEtriggeratref{8}
-% The "triggered" command can be changed if desired:
-%\IEEEtriggercmd{\enlargethispage{-5in}}
-
-% references section
-
-% can use a bibliography generated by BibTeX as a .bbl file
-% BibTeX documentation can be easily obtained at:
-% http://www.ctan.org/tex-archive/biblio/bibtex/contrib/doc/
-% The IEEEtran BibTeX style support page is at:
-% http://www.michaelshell.org/tex/ieeetran/bibtex/
-%\bibliographystyle{IEEEtran}
-% argument is your BibTeX string definitions and bibliography database(s)
-%\bibliography{IEEEabrv,../bib/paper}
-%
-% <OR> manually copy in the resultant .bbl file
-% set second argument of \begin to the number of references
-% (used to reserve space for the reference number labels box)
 \begin{thebibliography}{1}
 
 \bibitem{oldpaper:rapp}
@@ -138,6 +161,8 @@ Theodore S. Rappaport, James N. Murdock, and Felix Gutierrez, \emph{State of the
 Wirawan et al., \emph{Design of Low Cost Wireless Sensor Networks-Based Environmental Monitoring System for Developing Country}, Proceedings of APCC, 2008.
 \bibitem{envmon:rana}
 Rana et al.,\emph{Ear-Phone: An End-to-End Participatory Urban Noise Mapping System}, Proceedings of the 9th ACM/IEEE International Conference on Information Processing in Sensor Networks, 2010.
+\bibitem{envmon:rich}
+Jessica Richman, \emph{uBiome – Mapping Your Microbiome}, http://ubiome.com/
 \end{thebibliography}
 
 
